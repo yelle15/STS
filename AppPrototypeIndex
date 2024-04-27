@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agri-Aqua Solutions Mobile Application Prototype</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+    h1{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: bold;
+        color: #fff;
+    }
+    h2{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-weight: none;
+        color: #fff;
+    }
+    .background{
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(45deg, #170679, #50C878, #87CEEB, #BC815F);
+        background-size: 300% 300%;
+        animation: color 12s ease-in-out infinite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    @keyframes color{
+        0%{
+            background-position: 0% 50%;
+        }
+        50%{
+            background-position: 100% 50%;
+        }
+        100%{
+            background-position: 0 50%;
+        }
+    }
+    a{
+        padding: 10px;
+        color: #f44566;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    a:visited{
+        text-decoration:none;
+    }
+    nav{
+        background: #fff;
+        border-radius: 50px;
+        padding: 10px;
+        box-shadow: 0 25px 20px -20px rgba(0,0,0,0.4);
+    }
+    nav ul{
+        text-align: center;
+    }
+    nav ul li{
+        list-style: none;
+        display: inline-block;
+        padding: 13px 35px;
+        margin: 10px;
+        font-size: 18px;
+        font-weight: 500;
+        color: #777;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        transition: color 0.5s;
+        overflow: hidden;
+    }
+    nav ul li a{
+        display: inline-block;
+        transition: transform 0.3s ease-out;
+    }
+    nav ul li::after{
+        content: '';
+        background: #f44566;
+        width: 0%;
+        height: 100%;
+        border-radius: 30px;
+        position: absolute;
+        top: 0%; left: 0%;
+        z-index: -1;
+        opacity: 0;
+        transition: width 0.5s ease-out, opacity 0.5s ease-out;
+    }
+    nav ul li:hover a{
+        color: #fff;
+        transform: scale(1.1);
+    }
+    nav ul li:hover::after{
+        width: 100%;
+        opacity: 1;
+    }
+    </style>
+</head>
+
+
+<body>
+    <div class="background">
+        <h1>Agri-Aqua Solutions<h1>
+        <br>
+        <h2>Class 16-190 Team BTS</h2>
+        <br>
+        <nav>
+            <ul>
+                <li><a href="AppCrops.html">CROPS MONITORING SYSTEM</a></li>
+                <br>
+                <li><a href="AppWater.html">WATER MONITORING SYSTEM</a></li>
+                <br>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
