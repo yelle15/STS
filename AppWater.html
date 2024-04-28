@@ -141,7 +141,24 @@
         border-radius: 10px;
         overflow: hidden;
     }
+    @media only screen and (max-width: 600px) {
+    html {
+        background-size: contain; /* Adjust background image size */
+    }
 
+    .charts {
+        flex-direction: column; /* Stack charts vertically on smaller screens */
+    }
+
+    .chart, .background1 {
+        width: 90%; /* Adjust width of chart and background containers */
+        margin: 10px auto; /* Center align chart and background containers */
+    }
+
+    .image-container img {
+        max-width: 100%; /* Ensure images don't overflow on smaller screens */
+    }
+}
     
     </style>
 </head>
